@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://36bh.github.io/fronton-hernandez/sitemap.xml
