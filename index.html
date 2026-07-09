@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Frontón Hernández — Canchas de frontón en San Mateo Cuautepec, Tultitlán, Estado de México. Abierto todos los días de 10:00 AM a 7:00 PM. Reservas, torneos y ambiente familiar.">
+    <meta name="description" content="Frontón Hernández — Canchas de frontón en San Mateo Cuautepec, Tultitlán, Estado de México. Abierto todos los días de 10:00 AM a 8:00 PM. Reservas, torneos y ambiente familiar.">
     <meta name="keywords" content="frontón, cancha de frontón, San Mateo Cuautepec, Tultitlán, Estado de México, reservas, torneos de frontón, frontenis">
     <meta property="og:title" content="Frontón Hernández — San Mateo Cuautepec">
-    <meta property="og:description" content="Canchas de frontón profesionales en San Mateo Cuautepec. Abierto todos los días 10 AM – 7 PM. Reservas y torneos.">
+    <meta property="og:description" content="Canchas de frontón profesionales en San Mateo Cuautepec. Abierto todos los días 10 AM – 8 PM. Reservas y torneos.">
     <meta property="og:type" content="business.business">
     <meta property="og:image" content="https://36bh.github.io/fronton-hernandez/cancha.jpg">
     <meta property="og:url" content="https://36bh.github.io/fronton-hernandez/">
@@ -32,7 +32,7 @@
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
         "opens": "10:00",
-        "closes": "19:00"
+        "closes": "20:00"
       },
       "priceRange": "$",
       "sport": "Frontón"
@@ -195,7 +195,6 @@
             border-left: 4px solid #96C61C;
             border-radius: 8px;
             padding: 1.5rem;
-            max-width: 560px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
         .bk-label {
@@ -217,8 +216,11 @@
         }
         .slot-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 0.5rem;
+        }
+        @media (max-width: 480px) {
+            .slot-grid { grid-template-columns: repeat(3, 1fr); }
         }
         .slot {
             padding: 0.65rem 0.2rem;
@@ -359,7 +361,7 @@
             <h2>Horarios</h2>
             <div class="info-card">
                 <h3>📅 Abierto Todos los Días</h3>
-                <p><strong>Lunes a Domingo:</strong> 10:00 AM – 7:00 PM</p>
+                <p><strong>Lunes a Domingo:</strong> 10:00 AM – 8:00 PM</p>
                 <p style="margin-top: 1rem; color: #7aa814; font-weight: 600;">¡Abierto incluidos días feriados!</p>
             </div>
         </section>
@@ -440,7 +442,7 @@
     // (Admin ⚙️ → Datos para transferencia).
     // ────────────────────────────────────────────────────────────
 
-    var HORAS = ['10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
+    var HORAS = ['10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00'];
     function precioDe(h) { return parseInt(h) >= HORA_LUZ ? PRECIO_LUZ : PRECIO_DIA; }
     document.getElementById('precioTxt').textContent = '$' + PRECIO_DIA + ' MXN de día · $' + PRECIO_LUZ + ' MXN con luz desde las 6 pm';
     var slotSel = null;
